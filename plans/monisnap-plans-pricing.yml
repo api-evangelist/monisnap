@@ -1,0 +1,21 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.serena.vc/portfolio-profile/moni/
+plan_count: 0
+note: >-
+  MONI (Ex-Monisnap) publishes NO API plans or developer pricing tiers, because it
+  publishes no public API. Its B2B "remittance-as-a-service" / "Moni-as-a-Service"
+  platform — the white-label remittance product that neobanks such as Nickel and Bnext
+  embed — is sold through direct sales and partnership agreements, with no self-serve
+  sign-up, no published rate card and no developer plan page. On the consumer side MONI
+  does publish transfer pricing, but it is a per-corridor fee-and-FX quote computed live
+  in the app and on the marketing site rather than a set of subscription tiers, so there
+  is nothing plan-shaped to record. An honest zero, not an unchecked field.
+plans: []
+evidence:
+- url: https://www.monisnap.com/gb/
+  status: 403
+  result: Cloudflare bot challenge; consumer marketing site, no developer pricing page indexed
+- url: https://developer.monisnap.com/
+  status: 0
+  result: NXDOMAIN — no developer portal exists to carry a plan page

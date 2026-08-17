@@ -1,8 +1,17 @@
 aid: monisnap
 name: MONI (Ex-Monisnap)
-description: 'MONI (Ex-Monisnap) is a company surfaced as a portfolio company of serena and added to the
-  API Evangelist network as a stub for enrichment. Sector: fintech-insurtech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'MONI, formerly Monisnap, is a Paris-based remittance fintech founded in 2017 by Raphaël Rivière,
+  Jean-Baptiste Bouvier and Jonathan Brossard. It lets diaspora customers in France, Spain and the United
+  Kingdom send money to roughly 150 countries — as cash pickup across a partner network of some 350,000
+  payout points, as a transfer into a mobile money wallet, as mobile airtime top-up with more than 800
+  operators, or as a prepaid card recharge — through a consumer app and the monisnap.com and allo.monisnap.com
+  storefronts. Alongside the consumer product MONI runs a B2B "Moni-as-a-Service" remittance-as-a-service
+  platform that banks and neobanks such as Nickel and Bnext embed white-label in their own applications.
+  MONISNAP SAS is registered with the French ACPR as a payment services agent of MPS SAS, an authorised
+  payment institution (CIB 17738). MONI publishes no public API: there is no developer portal, no API
+  reference and no machine-readable contract on any MONI host — the partner platform is reached through a
+  sales conversation.'
+image: https://www.monisnap.com/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/apis.yml
 x-type: company
 x-source: serena-portfolio
@@ -14,6 +23,14 @@ modified: '2026-08-17'
 tags:
 - Company
 - Fintech Insurtech
+- Money Transfer
+- Remittances
+- Payments
+- Mobile Money
+- Airtime Top-Up
+- Prepaid Cards
+- Embedded Finance
+- France
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +38,54 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/monisnap-domain-security.yml
 - type: Website
   url: https://www.monisnap.com/fr/
+- type: Conformance
+  url: conformance/monisnap-conformance.yml
+- type: Plans
+  url: plans/monisnap-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/monisnap-rate-limits.yml
+- type: LLMsTxt
+  url: llms/monisnap-llms.txt
+- type: Support
+  url: https://monisnap.zendesk.com/hc/fr
+- type: TermsOfService
+  url: https://assets.monisnap.com/monisnap/legal/monisnap-legal-notice.pdf
+- type: PrivacyPolicy
+  url: https://www.monisnap.com/fr/politique-de-confidentialite/
+- type: GitHubOrganization
+  url: https://github.com/Monisnap
+- type: Blog
+  url: https://dev.to/monisnap
+- type: BlogRSS
+  url: https://dev.to/feed/monisnap
+- type: LinkedIn
+  url: https://www.linkedin.com/company/monisnap
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    MONI markets a B2B "Moni-as-a-Service" remittance-as-a-service platform that Nickel and
+    Bnext already embed, but ships it entirely through direct sales — there is no developer
+    portal to gate: api., docs., developer., developers. and sandbox.monisnap.com all
+    NXDOMAIN, and every /.well-known/ discovery path on the two live hosts 404s.
+  evidence:
+  - url: https://developer.monisnap.com/
+    status: 0
+  - url: https://www.monisnap.com/.well-known/api-catalog
+    status: 404
+  - url: https://allo.monisnap.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.monisnap.com/llms.txt
+    status: 404
+  - url: https://www.monisnap.com/gb/
+    status: 403
+  checked: '2026-08-17'

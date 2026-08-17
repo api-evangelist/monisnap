@@ -1,0 +1,19 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.serena.vc/portfolio-profile/moni/
+limit_count: 0
+note: >-
+  No rate limits are documented, because MONI (Ex-Monisnap) publishes no public API
+  reference. There is no developer portal, no API host in DNS, and no machine-readable
+  contract on any MONI origin, so there is nowhere for a limit, a window, a burst
+  allowance or a RateLimit-* response header to be published. Any limits that govern the
+  partner remittance-as-a-service integration are disclosed under a signed partnership
+  agreement, not publicly. An honest zero, not an unchecked field.
+limits: []
+headers: []
+evidence:
+- url: https://docs.monisnap.com/
+  status: 0
+  result: NXDOMAIN — no docs host exists to carry a rate-limit reference
+- url: https://www.monisnap.com/.well-known/api-catalog
+  status: 404

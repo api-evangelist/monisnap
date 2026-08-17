@@ -1,0 +1,42 @@
+generated: '2026-08-17'
+method: searched
+source: https://assets.monisnap.com/monisnap/legal/monisnap-legal-notice.pdf
+note: >-
+  MONI (Ex-Monisnap) publishes no machine-readable API contract, so no technical API
+  standard (OAuth 2.0, OpenID Connect, RFC 9457 problem details, JSON:API, OData,
+  pagination or idempotency conventions) can be asserted or refuted from a spec — those
+  rows are recorded as not-assessable rather than as failures. What MONI DOES publish is
+  its EU regulatory posture, in the consolidated legal documentation PDF served from its
+  own assets host, and those claims are captured below verbatim.
+standards:
+- id: eu-payment-services-agent-registration
+  conforms: true
+  evidence: >-
+    MONISNAP SAS is registered with the ACPR (Autorité de contrôle prudentiel et de
+    résolution) as an Agent de Prestataire de Services de Paiement, mandated by MPS SAS
+    (RCS Paris 951 325 729), an ACPR-authorised Établissement de Paiement, CIB 17738.
+  source: https://assets.monisnap.com/monisnap/legal/monisnap-legal-notice.pdf
+- id: gdpr
+  conforms: true
+  evidence: >-
+    Published Politique de confidentialité inside the legal documentation, naming the
+    lawful bases, retention, transfers outside the EU, a named data protection contact
+    (dpo@monisnap.com) and the CNIL as supervisory authority.
+  source: https://assets.monisnap.com/monisnap/legal/monisnap-legal-notice.pdf
+- id: oauth2
+  conforms: null
+  evidence: not assessable — no public OpenAPI or securityScheme is published
+- id: oidc
+  conforms: null
+  evidence: not assessable — /.well-known/openid-configuration returned 404 on every host
+- id: rfc9457-problem-details
+  conforms: null
+  evidence: not assessable — no public API contract or error reference is published
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on www.monisnap.com and allo.monisnap.com
+certifications: []
+certifications_note: >-
+  No trust centre, security certifications page, SOC 2 / ISO 27001 / PCI DSS attestation
+  or bug-bounty programme was found on any MONI host, so no Compliance or TrustCenter
+  pointer is emitted.

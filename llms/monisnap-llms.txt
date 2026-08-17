@@ -1,0 +1,51 @@
+# MONI (Ex-Monisnap)
+
+> MONI, formerly Monisnap, is a Paris-based remittance fintech founded in 2017 that lets
+> diaspora customers in France, Spain and the United Kingdom send money to family in
+> roughly 150 countries — as cash pickup, to mobile money wallets, as mobile airtime
+> top-up, or as a prepaid card recharge. It operates a consumer app and web storefront
+> and, alongside it, a B2B "Moni-as-a-Service" remittance-as-a-service platform that
+> banks and neobanks (Nickel, Bnext) embed in their own applications. MONISNAP SAS is
+> registered with the French ACPR as a payment services agent of MPS SAS, an authorised
+> payment institution (CIB 17738).
+
+## Agent note — no public API
+
+MONI publishes **no public API**. As of 2026-08-17 there is no developer portal, no API
+reference, no OpenAPI/AsyncAPI/GraphQL contract, no MCP server and no A2A agent card on
+any MONI host. `api.monisnap.com`, `docs.monisnap.com`, `developer.monisnap.com`,
+`developers.monisnap.com` and `sandbox.monisnap.com` do not resolve in DNS. Every
+`/.well-known/` discovery path on `www.monisnap.com` and `allo.monisnap.com` returns 404.
+The remittance-as-a-service platform is reached through a partnership/sales conversation,
+not a self-serve developer sign-up. Do not synthesise endpoints for MONI — there are none
+to call.
+
+## Company
+
+- [MONI website (FR)](https://www.monisnap.com/fr/): Consumer money transfer, cash pickup, mobile wallet, airtime and prepaid recharge
+- [MONI website (GB)](https://www.monisnap.com/gb/): English-language consumer site
+- [allo.monisnap.com](https://allo.monisnap.com/fr/): Airtime top-up and prepaid card recharge storefront
+- [MONI on LinkedIn](https://www.linkedin.com/company/monisnap): Company profile and announcements
+- [Serena portfolio profile](https://www.serena.vc/portfolio-profile/moni/): Investor profile — founding year, founders, sector, operating regions
+
+## Support and legal
+
+- [MONI help centre](https://monisnap.zendesk.com/hc/fr): Zendesk-hosted customer support knowledge base (FR/EN/ES)
+- [Legal documentation (PDF)](https://assets.monisnap.com/monisnap/legal/monisnap-legal-notice.pdf): Mentions légales, CGU, CGV and privacy policy in one document, including ACPR agent registration
+- [Terms and conditions of sale, EN (PDF)](https://airtime-medias.monisnap.com/legal/terms-and-conditions-sales-en.pdf): allo.monisnap.com sale terms
+- [Privacy policy](https://www.monisnap.com/fr/politique-de-confidentialite/): Data protection policy
+
+## Engineering
+
+- [Monisnap on GitHub](https://github.com/Monisnap): Company GitHub organisation — technical-test and sample repositories only, no SDK or client library
+- [Monisnap on DEV](https://dev.to/monisnap): Engineering blog, eleven posts 2020-2022 (Vue/TypeScript design system, serverless, Flutter CI/CD, Cloudflare)
+- [Engineering blog feed](https://dev.to/feed/monisnap): RSS
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/apis.yml): APIs.json 0.20 profile for MONI
+- [Well-known probe](https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/well-known/monisnap-well-known.yml): Recorded absence — every discovery path probed, with status
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/conformance/monisnap-conformance.yml): ACPR payment-agent registration and GDPR posture from the published legal documentation
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/security/monisnap-domain-security.yml): TLS, HSTS, DNSSEC, SPF and DMARC probe of monisnap.com
+- [Plans](https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/plans/monisnap-plans-pricing.yml): plan_count 0 — no published API pricing
+- [Rate limits](https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/rate-limits/monisnap-rate-limits.yml): limit_count 0 — no published limits

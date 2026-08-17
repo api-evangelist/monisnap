@@ -1,0 +1,106 @@
+generated: '2026-08-17'
+method: probed
+source: live GET probes of every MONI (Ex-Monisnap) host found in apis.yml and in search
+note: >-
+  Nothing was served. Every /.well-known/ path on every MONI host returned 404 (or a
+  Cloudflare 403 interstitial on the marketing origin). No WellKnown or SecurityTxt
+  pointer is emitted in apis.yml — this file records a measured ABSENCE, not a presence.
+  monisnap.com and allo.monisnap.com sit behind a Cloudflare WAF that answers 403 to
+  non-browser clients for HTML paths, but the /.well-known/* and /llms.txt probes below
+  reached the origin and returned genuine 404s, so the absence is real and not an artifact
+  of the challenge.
+hosts:
+- host: https://www.monisnap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://allo.monisnap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://monisnap.zendesk.com
+  note: MONI help centre, hosted on Zendesk (third-party host, not a MONI origin).
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery. No REST OpenAPI, no GraphQL surface, no MCP endpoint and
+    no A2A agent card were found on any MONI host. api.monisnap.com, docs.monisnap.com,
+    developer.monisnap.com, developers.monisnap.com and sandbox.monisnap.com do not
+    resolve in DNS at all (NXDOMAIN) — MONI operates no developer-facing host.
+  probes:
+  - url: https://api.monisnap.com/
+    status: 0
+    result: NXDOMAIN
+  - url: https://docs.monisnap.com/
+    status: 0
+    result: NXDOMAIN
+  - url: https://developer.monisnap.com/
+    status: 0
+    result: NXDOMAIN
+  - url: https://developers.monisnap.com/
+    status: 0
+    result: NXDOMAIN
+  - url: https://sandbox.monisnap.com/
+    status: 0
+    result: NXDOMAIN
+  - url: https://status.monisnap.com/
+    status: 0
+    result: NXDOMAIN
+  - url: https://www.monisnap.com/openapi.json
+    status: 403
+    result: Cloudflare bot challenge (not a spec)
+  - url: https://www.monisnap.com/swagger.json
+    status: 403
+    result: Cloudflare bot challenge (not a spec)
+  - url: https://allo.monisnap.com/openapi.json
+    status: 403
+    result: Cloudflare bot challenge (not a spec)
+  - url: https://allo.monisnap.com/swagger.json
+    status: 403
+    result: Cloudflare bot challenge (not a spec)
+  - url: https://allo.monisnap.com/api-docs
+    status: 403
+    result: Cloudflare bot challenge (not a spec)
+  - url: https://allo.monisnap.com/v1/openapi.json
+    status: 403
+    result: Cloudflare bot challenge (not a spec)
+  - url: https://allo.monisnap.com/robots.txt
+    status: 200
+    result: >-
+      Disallows /api/ — the allo.monisnap.com storefront has a private first-party
+      /api/ path for its own web client. It is disallowed by robots and was NOT probed.
+      It is an internal application endpoint, not a published developer API.
