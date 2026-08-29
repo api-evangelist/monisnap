@@ -11,6 +11,17 @@ description: 'MONI, formerly Monisnap, is a Paris-based remittance fintech found
   payment institution (CIB 17738). MONI publishes no public API: there is no developer portal, no API
   reference and no machine-readable contract on any MONI host — the partner platform is reached through a
   sales conversation.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.monisnap.com/logo.png
 url: https://raw.githubusercontent.com/api-evangelist/monisnap/refs/heads/main/apis.yml
 x-type: company
