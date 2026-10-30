@@ -64,6 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-MONI (Ex-Monisnap) is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: fintech-insurtech. This profile is a lead awaiting the enrichment pipeline.
+MONI, formerly Monisnap, is a Paris-based remittance fintech founded in 2017 by Raphaël Rivière, Jean-Baptiste Bouvier and Jonathan Brossard. It lets diaspora customers in France, Spain and the United Kingdom send money to roughly 150 countries — as cash pickup across a partner network of some 350,000 payout points, as a transfer into a mobile money wallet, as mobile airtime top-up with more than 800 operators, or as a prepaid card recharge — through a consumer app and the monisnap.com and allo.monisnap.com storefronts. Alongside the consumer product MONI runs a B2B "Moni-as-a-Service" remittance-as-a-service platform that banks and neobanks such as Nickel and Bnext embed white-label in their own applications. MONISNAP SAS is registered with the French ACPR as a payment services agent of MPS SAS, an authorised payment institution (CIB 17738). MONI publishes no public API: there is no developer portal, no API reference and no machine-readable contract on any MONI host — the partner platform is reached through a sales conversation.
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.monisnap.com/fr/
+**Areas:** Company · Fintech Insurtech · Money Transfer · Remittances · Payments · Mobile Money · Airtime Top-Up · Prepaid Cards · Embedded Finance · France
+
+## MONI (Ex-Monisnap) on APIs.io
+
+Everything profiled for MONI (Ex-Monisnap) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/monisnap/](https://apis.io/providers/monisnap/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Monisnap Domain Security](https://apis.io/security/monisnap/monisnap-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Monisnap Plans Pricing](https://apis.io/plans/monisnap/monisnap-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Monisnap Rate Limits](https://apis.io/rate-limits/monisnap/monisnap-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.monisnap.com/fr/)
+- [Support](https://monisnap.zendesk.com/hc/fr)
+- [Blog](https://dev.to/monisnap)
+- [Terms of service](https://assets.monisnap.com/monisnap/legal/monisnap-legal-notice.pdf)
+- [Privacy policy](https://www.monisnap.com/fr/politique-de-confidentialite/)
+- [GitHub](https://github.com/Monisnap)
+
+## API Evangelist rating
+
+**Kin Score 13.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.0** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/monisnap/](https://apis.io/providers/monisnap/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MONI (Ex-Monisnap): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/monisnap/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
